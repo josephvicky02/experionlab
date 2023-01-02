@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins, sans-serif;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justifyCenter {
+            justify-content: center;
+        }
+
+        .alignItems {
+            align-items: center;
+        }
+
+        .login {
+            display: noned;
+            height: 500px;
+            width: 350px;
+            background-color: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .login img {
+            width: 100%;
+            height: 35%;
+            object-fit: cover;
+        }
+
+        .container {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url(Images/image\ bg.jpg);
+        }
+
+        .profilePicHolder {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 25%;
+        }
+
+        .profilePicHolder img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform: scale(90%);
+        }
+
+        .textalign {
+            text-align: center;
+        }
+
+        .nameHolder {
+            margin-top: 3rem;
+        }
+
+        .nameHolder h1 {
+            font-size: 1.3rem;
+            color: rgba(17, 74, 19, 0.961);
+        }
+
+        .datas {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 98%;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            background-color: rgba(255, 255, 255, 0.355);
+        }
+
+        .datas2 p {
+            font-weight: 600;
+        }
+
+        .datas2 {
+            position: absolute;
+            top: 66%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 98%;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+        }
+
+        .container input {
+            background-color: rgb(255, 0, 76);
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            height: 8%;
+            border: 0;
+            outline: 0;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        #About {
+            display: none;
+            flex-direction: column;
+            height: 500px;
+            width: 350px;
+            background-color: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            padding: 1rem;
+            font-size: 1.2rem;
+            margin-left: 2rem;
+        }
+
+        .ABoutTitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: rgb(255, 0, 212);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex justifyCenter alignItems container">
+        <div class="login " id="mainLogin">
+            <img src="Images/bg.jpg"
+                alt="profileBackground">
+            <div class="profilePicHolder">
+                <img src="Images/my pic.jpg"
+                    alt="ProfilePicture">
+            </div>
+            <div class="nameHolder">
+                <h1 class="textalign">joe vicky</h1>
+                <p class="textalign">Fashion / Model
+                </p>
+            </div>
+            <div class="datas">
+                <p>post</p>
+                <p>Followers</p>
+                <p>Following</p>
+            </div>
+            <div class="datas2">
+                <p>60</p>
+                <p>1.5K</p>
+                <p>455</p>
+            </div>
+            <input type="button" value="Follow" onclick="DisplayDetails()">
+        </div>
+        <div id="About">
+            <p class="ABoutTitle">Joe vicky</p>
+            <p>dont follow girls follow your goals girls follows you </p>
+        </div>
+    </div>
+</body>
+<script>
+    var i = 0;
+
+    function DisplayDetails() {
+        if (i == 0) {
+            document.getElementById("About").style.display = 'flex';
+            i = 1;
+        }
+        else {
+
+            document.getElementById("About").style.display = 'none';
+            i = 0;
+        }
+    }
+</script>
+
+</html>

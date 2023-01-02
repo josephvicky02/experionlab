@@ -1,0 +1,19 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "extends":[
+        "eslint:recommended"
+    ],
+    "rules": {
+        "no-undef":
+
+    },
+
+    "rules":{
+        "prefer-const":"warn" ,
+        "camelcase":"warn" ,
+        "quotes":[1]
+
+    }
+}
